@@ -1,0 +1,44 @@
+$body-background-color: $color-bg-darker;
+$body-color: $color-text-light;
+$link: $color-text-lighter;
+
+main {
+    background-color: $body-background-color!important;
+    height: 100vh;
+    width: 100%;
+}
+.navbar {
+    background-color: $color-bg-light;
+    color: $color-text-lighter;
+     .navbar-dropdown,
+     .navbar-brand,
+     .navbar-start,
+     .navbar-burger,
+     .navbar-item,
+     .navbar-link,
+     .navbar-menu {
+        background-color: $color-bg-med;
+        color: $color-text-lighter;
+     }
+     .navbar-divider{
+        background-color: $color-bg-light;
+     }
+     .navbar-item.has-dropdown:hover {
+        .navbar-link {
+            background-color: $color-bg-lighter!important;
+        }
+     }
+     .navbar-link:not(.is-arrowless)::after {
+        border-color: hsl(153, 53%, 53%)
+    }
+     .navbar-item {
+         &.is-active {
+        color: $body-color!important;
+        background-color: $color-bg-lighter!important;
+        }
+        &:hover {
+            color: $body-color!important;
+            background-color: $color-bg-light!important;
+        }
+    }
+}
