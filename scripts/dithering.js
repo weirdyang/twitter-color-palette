@@ -47,7 +47,7 @@ const create = (svg) => {
       width,
       height,
       points,
-      relaxIterations: 6
+      relaxIterations: 8
     });
     svg.clear();
     random([drawScratches, processCells])(cells, svg);
