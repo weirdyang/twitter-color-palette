@@ -29,7 +29,7 @@ const grayscale = (data) => {
 const create = (svg) => {
   const img = new Image();
   img.crossOrigin = "anonymous";
-  img.src = "https://source.unsplash.com/random/300x300/?dogs,cats,poodles,animals,hamsters";
+  img.src = "https://source.unsplash.com/random/300x300/?dogs,beasts,cute";
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   let pixelData = "";
