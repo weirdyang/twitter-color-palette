@@ -32,6 +32,7 @@
     "@georgedoescode/generative-utils": "^2.0.1",
     "@netlify/functions": "^2.8.2",
     "@svgdotjs/svg.js": "^3.2.4",
+    "axios": "^1.7.7",
     "colorthief": "^2.6.0",
     "cu": "^1.0.0-prerelease0.1",
     "culori": "^4.0.1",

@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
 require('dotenv').config()
+import axios from 'axios';
+
 const bearer = process.env.BEARER;
 const headers = {
   /* Required for CORS support to work */
@@ -14,9 +16,8 @@ exports.handler = async function ({ queryStringParameters }) {
 
   try{
     const { q: username } = queryStringParameters;
-    const socialDataResponse = await fetch(`https://api.socialdata.tools/twitter/user/${username}`,
+    const socialDataResponse = await axios.get(`https://api.socialdata.tools/twitter/user/${username}`,
     {
-      method: 'GET',
       headers: {
         'Authorization': `Bearer ${bearer}`,
         'Accept': 'application/json'
