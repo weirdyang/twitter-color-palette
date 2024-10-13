@@ -163,7 +163,7 @@ async function getUser(url) {
       error
     };
   } else {
-    const { user } = await res.json();
+    const user = await res.json();
     console.log(user);
     user.ok = true;
     return user;
@@ -178,8 +178,8 @@ async function loadImg(user) {
   return img;
 }
 
-async function generatePalette(username = "alterwyx") {
-  const url = `https://scraped-knees.netlify.app/.netlify/functions/twitter?q=${username}`;
+async function generatePalette(username = "gzcl3000") {
+  const url = `./.netlify/functions/twitter?q=${username}`;
   const user = await getUser(url);
   if (!user.ok) {
     console.log(user.error);
