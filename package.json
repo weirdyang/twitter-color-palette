@@ -16,7 +16,7 @@
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "parcel build index.html --no-content-hash --out-dir build"
+    "release": "parcel build index.html --no-content-hash --dist-dir build"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
