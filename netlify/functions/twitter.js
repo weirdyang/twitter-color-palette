@@ -24,7 +24,8 @@ exports.handler = async function ({ queryStringParameters }) {
         'Accept': 'application/json'
       }
     });
-    const userData = socialDataResponse.data;
+    const userData = await socialDataResponse.json();
+    console.log(userData);
     return {
       statusCode: 200,
       headers,
