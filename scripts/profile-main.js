@@ -171,7 +171,7 @@ async function getUser(url) {
 }
 async function loadImg(user) {
   const img = document.createElement("img");
-  const src = user.data.profile_image_url.replace("_normal", "");
+  const src = user.profile_image_url_https;
   img.src = src;
   img.crossOrigin = `anonymous`;
   await img.decode();
