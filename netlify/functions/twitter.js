@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
-require('dotenv').config()
 import fetch from 'node-fetch';
 
 const bearer = process.env.BEARER;
