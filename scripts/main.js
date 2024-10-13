@@ -264,14 +264,14 @@ async function getUser(url) {
 }
 async function loadImg(user) {
   const img = document.createElement("img");
-  const src = user.data.profile_image_url.replace("_normal", "");
+  const src = user.profile_image_url_https;
   img.src = src;
   img.crossOrigin = `anonymous`;
   await img.decode();
   return img;
 }
 
-async function generatePalette(username = "alterwyx") {
+async function generatePalette(username = "n") {
   const url = `https://scraped-knees.netlify.app/.netlify/functions/twitter?q=${username}`;
   const user = await getUser(url);
   if (!user.ok) {

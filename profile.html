@@ -1,71 +1,104 @@
 <!doctype html>
-<html class="no-js color-theme-in-transition"
-  lang="en">
+<html
+  class="no-js color-theme-in-transition"
+  lang="en"
+>
 
 
 <head>
   <meta charset="utf-8">
   <title>generate patterns and palettes from your twitter profile picture</title>
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
   <!-- Short description of the document (limit to 150 characters) -->
   <!-- This content *may* be used as a part of search engine results. -->
-  <meta name="description"
-    content="generate patterns and palettes from your twitter profile picture">
+  <meta
+    name="description"
+    content="generate patterns and palettes from your twitter profile picture"
+  >
   <!-- Control the behavior of search engine crawling and indexing -->
-  <meta name="robots"
-    content="index,follow"><!-- All Search Engines -->
-  <meta name="googlebot"
-    content="index,follow"><!-- Google Specific -->
+  <meta
+    name="robots"
+    content="index,follow"
+  ><!-- All Search Engines -->
+  <meta
+    name="googlebot"
+    content="index,follow"
+  ><!-- Google Specific -->
 
   <!-- Gives a general age rating based on the document's content -->
-  <meta name="rating"
-    content="General">
+  <meta
+    name="rating"
+    content="General"
+  >
 
   <!--
   <meta property="og:url"
     content="https://nb-sg.netlify.app/" /> -->
-  <meta property="og:type"
-    content="website" /> <!-- website is deafult -->
-  <meta property="og:title"
-    content="colors gen" />
-  <meta property="og:description"
-    content="generate patterns and palettes from your twitter profile picture" />
-  <meta property="og:site_name"
-    content="nabei">
-  <meta property="og:locale"
-    content="en_US">
-  <link href="./scss/profile-styles.scss"
-    rel="stylesheet">
+  <meta
+    property="og:type"
+    content="website"
+  /> <!-- website is deafult -->
+  <meta
+    property="og:title"
+    content="colors gen"
+  />
+  <meta
+    property="og:description"
+    content="generate patterns and palettes from your twitter profile picture"
+  />
+  <meta
+    property="og:site_name"
+    content="nabei"
+  >
+  <meta
+    property="og:locale"
+    content="en_US"
+  >
+  <link
+    href="./scss/profile-styles.scss"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
   <section class="main">
     <div class="form">
-      <section id="error"
-        class="form-error error-message invisible">
+      <section
+        id="error"
+        class="form-error error-message invisible"
+      >
         Please enter a proper name
       </section>
       <section class="username-input">
         <label for="name"> Username</label>
 
-        <input autocomplete="false"
+        <input
+          autocomplete="false"
           type="text"
           id="name"
           name="name"
           required
-          minlength="4">
+          minlength="4"
+        >
       </section>
       <section class="controls">
-        <button class="button"
-          id="show">
+        <button
+          class="button"
+          id="show"
+        >
           SHOW
         </button>
       </section>
 
     </div>
   </section>
-  <script src="./scripts/profile-main.js"></script>
+  <script
+    type="module"
+    src="./scripts/profile-main.js"
+  ></script>
 </body>
 
 </html>
