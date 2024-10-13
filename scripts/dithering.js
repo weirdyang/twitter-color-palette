@@ -26,10 +26,15 @@ const grayscale = (data) => {
       data[i + 2] = avg; // blue
   }
 };
-const create = (svg) => {
+const create = async (svg) => {
   const img = new Image();
   img.crossOrigin = "anonymous";
-  img.src = "https://dog.ceo/api/breeds/image/random";
+  const dog = await fetch('https://dog.ceo/api/breeds/image/random');
+  if(!dog.ok){
+    console.error('no dog');
+  }
+  const { message: dogSrc } = await dog.json();
+  img.src = dogSrc;
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   let pixelData = "";
@@ -263,7 +268,7 @@ const circles = (points, svg) => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',async () => {
   const container = document.querySelector('.svg-container');
 
   const svg = SVG()
@@ -271,5 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
   .addTo(container)
   .attr("preserveAspectRatio", "xMidYMid slice");
 
-  create(svg);
+  await create(svg);
 })
